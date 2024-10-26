@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+:root {
+    --background-color: hsl(218, 23%, 16%);
+    --background-color-card: hsl(217, 19%, 24%);
+    --text-color: hsl(193, 38%, 86%);
+    --highlight-color: hsl(150, 100%, 66%);
+}
+
+body {
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    background-color: var(--background-color-card);
+    height: 331px;
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-family: "Manrope", sans-serif;
+    padding: 20px;
+    color: var(--text-color);
+    text-align: center;
+    border-radius: 12px;
+    position: relative;
+}
+
+.card .advice-number {
+    color: var(--highlight-color);
+    letter-spacing: 4px;
+    font-weight: bold;
+    font-size: 13px;
+    position: relative;
+    top: -20px;
+}
+
+.card .advice {
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.button {
+    width: 66px;
+    height: 68px;
+    border-radius: 50%;
+    background-color: var(--highlight-color);
+    position: absolute;
+    bottom: -34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 0.3s;
+}
+
+.button:hover {
+    box-shadow: 0 0 15px 1px var(--highlight-color);
+    cursor: pointer;
+}
