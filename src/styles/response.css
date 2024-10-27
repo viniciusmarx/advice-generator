@@ -1,0 +1,13 @@
+@media(width<=560px) {
+    .card {
+        width: 80%;
+    }
+
+    .card .advice {
+        font-size: 20px;
+    }
+
+    .card .divider {
+        width: 100%;
+    }
+}
