@@ -6,9 +6,6 @@ async function getAdvice() {
 	try {
 		const response = await axios.get("https://api.adviceslip.com/advice");
 		const { slip } = response.data;
-		const data = response.data;
-		console.log({ ...data });
-
 		adviceNumber.textContent = `ADVICE #${slip.id}`;
 		advice.textContent = slip.advice;
 	} catch (error) {
