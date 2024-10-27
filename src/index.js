@@ -4,11 +4,11 @@ const button = document.getElementById("button");
 
 async function getAdvice() {
 	try {
-		const response = await fetch("https://api.adviceslip.com/advice");
-		if (!response.ok) {
-			throw new Error("Error in api response");
-		}
-		const { slip } = await response.json();
+		const response = await axios.get("https://api.adviceslip.com/advice");
+		const { slip } = response.data;
+		const data = response.data;
+		console.log({ ...data });
+
 		adviceNumber.textContent = `ADVICE #${slip.id}`;
 		advice.textContent = slip.advice;
 	} catch (error) {
